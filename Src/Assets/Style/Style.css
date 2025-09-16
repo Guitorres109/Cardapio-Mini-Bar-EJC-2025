@@ -26,6 +26,7 @@ body {
     border-bottom-right-radius: 30px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
     display: block;
+    animation: fadeIn 1.3s ease-in;
 }
 .img-mobile {
     max-width: 100%;
@@ -34,6 +35,7 @@ body {
     border-bottom-right-radius: 30px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
     display: none;
+    animation: fadeIn 1.3s ease-in;
 }
 
 header h1 {
@@ -125,3 +127,30 @@ footer {
         display: block;
     }
 }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* Quando aparece na tela */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+

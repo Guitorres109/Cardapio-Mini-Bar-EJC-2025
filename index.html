@@ -7,15 +7,15 @@
     <meta name="Author" content="Guilherme Torres">
     <meta name="Description" content="Cárdapio do Mini-Bar do EJC 2025">
     <link rel="icon" href="Src/Assets/images/Ejc.png">
-    <title>Cárdapio Mini-Bar EJC 2025</title>
+    <title>Cárdapio Mini Bar EJC 2025</title>
 </head>
 <body>
     <header>
         <img src="Src/Assets/images/IMG-20250916-WA0009.jpg" alt="" class="img-desktop"> 
-        <img src="Src/Assets/images/IMG-20250916-WA0011.jpg" alt=""class="img-mobile">
+        <img src="Src/Assets/images/IMG-20250916-WA0011.jpg" alt="" class="img-mobile">
     </header>
     <main>
-        <section class="Bebidas">
+        <section class="Bebidas reveal">
             <h2>Bebidas</h2>
             <ul>
                 <li>Refrigerante  <span>10 R$</span> </li>
@@ -23,21 +23,44 @@
                 <li>Água Mineral  <span>10 R$</span> </li>
             </ul>
         </section>
-        <section class="Doces">
+        <section class="Doces reveal">
             <h2>Doces</h2>
             <ul>
                 <li>Chiclete Trident  <span>10 R$</span></li>
                 <li>Bala de Goma  <span>10 R$</span> </li>
-                <li>Choc. Diamante Negro  <span>10 R$</span></li>
+                <li>Chocolate <br> Diamante Negro  <span>10 R$</span></li>
                 <li>Bala Mentos  <span>10 R$</span> </li>
-                <li>Bombom Ouro Branco  <span>10 R$</span> </li>
-                <li>Bombom Sonho de Valsa  <span>10 R$</span> </li>
+                <li>Bombom <br> Ouro Branco  <span>10 R$</span> </li>
+                <li>Bombom Sonho <br> de Valsa  <span>10 R$</span> </li>
                 <li>Bala Halls  <span>10 R$</span> </li>
+            </ul>
+        </section>
+        <section class="Artigos reveal">
+            <h2>Artigos Religiosos</h2>
+            <ul>
+                <li>Terço de Dedo <span>10 R$</span></li>
+                <li>Terço Colorido <span>10 R$</span></li>
+                <li>Chaveiro do EJC <span>10 R$</span></li>
+                <li>Chaveiro <br>de Anjinho <span>10 R$</span></li>
             </ul>
         </section>
     </main>
     <footer>
-        <p><span><Strong>ATENÇÃO!</Strong></span> Os itens adiquiridos para pagamento posterior serão cobrados ao final do encontro ou na semana seguinte.</p>
+        <p><span><strong>ATENÇÃO!</strong></span> Os itens adquiridos para pagamento posterior serão cobrados ao final do encontro ou na semana seguinte.</p>
     </footer>
+    <script>
+        const items = document.querySelectorAll('.reveal');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // só uma vez
+                }
+            });
+        }, { threshold: 0.1 });
+
+        items.forEach(item => observer.observe(item));
+    </script>
 </body>
 </html>
