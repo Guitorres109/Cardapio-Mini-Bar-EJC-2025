@@ -11,8 +11,12 @@
 </head>
 <body>
     <header>
-        <img src="Src/Assets/images/IMG-20250916-WA0009.jpg" alt="" class="img-desktop"> 
-        <img src="Src/Assets/images/IMG-20250916-WA0011.jpg" alt="" class="img-mobile">
+        <img src="Src/Assets/images/IMG-20250916-WA0009.jpg" alt="Arte Cárdapio EJC 2025" class="img-desktop"> 
+        <img src="Src/Assets/images/IMG-20250916-WA0011.jpg" alt="Arte Cárdapio EJC 2025" class="img-mobile">
+    <!-- <audio controls>Busco a Ti Meu Deus - Comunidade Católica Shalom
+        <source src="musica.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio> -->
     </header>
     <main>
         <section class="Bebidas reveal">
@@ -44,6 +48,14 @@
                 <li>Chaveiro <br>de Anjinho <span>10 R$</span></li>
             </ul>
         </section>
+        <article class="musica reveal">
+            <H2>Música Tema</H2>
+            <p>Busco a Ti Meu Deus - Comunidade Católica Shalom</p>
+            <audio controls>
+                <source src="Src/Assets/Audio/Busco a Ti Meu Deus.mp3" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </article>
     </main>
     <footer>
         <p><span><strong>ATENÇÃO!</strong></span> Os itens adquiridos para pagamento posterior serão cobrados ao final do encontro ou na semana seguinte.</p>
@@ -58,7 +70,7 @@
                     observer.unobserve(entry.target); // só uma vez
                 }
             });
-        }, { threshold: 0.1 });
+        }, { threshold: 0.5 });
 
         items.forEach(item => observer.observe(item));
     </script>
