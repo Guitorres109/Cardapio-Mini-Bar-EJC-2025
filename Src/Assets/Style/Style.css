@@ -198,3 +198,7 @@ article p {
     color: #555;
     margin-top: 1rem;
 }
+.esgotado {
+    color: rgb(255, 0, 0);
+    text-decoration: line-through;
+}
