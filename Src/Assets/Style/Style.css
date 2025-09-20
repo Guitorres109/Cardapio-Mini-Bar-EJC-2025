@@ -201,4 +201,7 @@ article p {
 .esgotado {
     color: rgb(255, 0, 0);
     text-decoration: line-through;
+    .Preço{
+        display: none;
+    }
 }
